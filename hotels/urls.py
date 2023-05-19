@@ -22,8 +22,11 @@ from hotels_app import views
 
 router = routers.DefaultRouter()
 router.register(r'numbers', views.NumberReservedViewSet, basename='numbers')
+# router.register(r'data_reserved', views.DateReserved.as_view(), basename='data_reserved')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('data_reserved', views.DateReserved.as_view(), name='data_reserved')
+
 ]
