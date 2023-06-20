@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser
 class NumberReserved(models.Model):
     type = models.CharField(max_length=255, null=True, blank=True, verbose_name='Тип номера')
     date_start_reserved = models.DateField(verbose_name='Дата въезда')
@@ -19,3 +19,6 @@ class Number(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     type = models.CharField(max_length=255, verbose_name="Тип номера")
     rooms = models.IntegerField(verbose_name='Количество комнат')
+
+class User(AbstractUser):
+    working_position = models.ForeignKey(WorkingPosition, on_delete=models.CASCADE, verbose_name='Должность', related_name='working_position', blank=True, null=True)

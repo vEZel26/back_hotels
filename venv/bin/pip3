@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/vezel/Рабочий стол/Hotel/hotels_back/venv/bin/python3" "$0" "$@"
+'''exec' "/Users/dunice/Downloads/Hotel 2/hotels_back/venv/bin/python3.10" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
